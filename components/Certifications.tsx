@@ -23,17 +23,35 @@ export function Certifications() {
               transition={{ duration: 0.45, delay: idx * 0.08 }}
               className="group rounded-2xl bg-white border border-brand-border p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-brand-soft hover:border-brand-skySoft transition-all duration-200"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-brand-tint flex items-center justify-center text-brand-sky shrink-0">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-brand-tint flex items-center justify-center text-brand-sky shrink-0 mt-0.5">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold text-brand-ink">
                     {cert.title}
                   </h3>
-                  <div className="text-sm text-brand-muted">
-                    {cert.date}
+                  <div className="text-sm text-brand-muted mt-0.5">
+                    {[
+                      cert.issuer,
+                      cert.date,
+                      cert.credentialId ? `Credential ID ${cert.credentialId}` : undefined,
+                    ]
+                      .filter(Boolean)
+                      .join(' · ')}
                   </div>
+                  {cert.skills && cert.skills.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {cert.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-2.5 py-0.5 rounded-full bg-brand-tint border border-brand-border/60 text-xs font-medium text-brand-navy"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -42,7 +60,7 @@ export function Certifications() {
                   href={cert.verifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-navy hover:text-brand-sky transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-navy hover:text-brand-sky transition-colors shrink-0"
                 >
                   <span>Verify Credential</span>
                   <ArrowUpRight className="w-4 h-4" />
