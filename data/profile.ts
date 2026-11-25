@@ -23,5 +23,6 @@ export const profile = {
   ],
   linkedin: 'https://www.linkedin.com/in/hansel-varian-a88858303/',
   github: 'https://github.com/anselva11/',
+  whatsapp: 'https://wa.me/6287863375516',
   tagline: 'Build. Analyze. Lead. Create Value.',
 }
