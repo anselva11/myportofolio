@@ -25,10 +25,10 @@ export function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-5 pointer-events-none">
+      <div className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-5 pointer-events-none">
         <header
           className={`pointer-events-auto max-w-6xl mx-auto rounded-full border border-brand-border bg-white/90 backdrop-blur-md shadow-nav transition-all duration-300 ${
-            scrolled ? 'px-5 py-2.5' : 'px-6 py-3.5'
+            scrolled ? 'px-4 py-2 sm:px-5 sm:py-2.5' : 'px-5 py-2.5 sm:px-6 sm:py-3.5'
           }`}
         >
           <div className="flex items-center justify-between gap-4">
@@ -94,41 +94,51 @@ export function Navbar() {
       {/* Mobile Navigation Drawer */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-4 top-20 z-40 md:hidden rounded-3xl bg-white border border-brand-border shadow-editorial p-6"
-          >
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-soft border border-brand-border text-xs font-medium text-brand-navy mb-5">
-              <span className="w-2 h-2 rounded-full bg-brand-sky" />
-              <span>Available for opportunities</span>
-            </div>
-
-            <nav className="flex flex-col space-y-1 mb-6">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="px-4 py-3 rounded-xl text-base font-medium text-brand-ink hover:bg-brand-soft hover:text-brand-navy transition-colors flex items-center justify-between"
-                >
-                  <span>{item.label}</span>
-                  <ArrowRight className="w-4 h-4 text-brand-sky" />
-                </Link>
-              ))}
-            </nav>
-
-            <Link
-              href="#contact"
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={() => setMobileOpen(false)}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-brand-navy text-white text-sm font-medium hover:bg-brand-sky transition-colors"
+              className="fixed inset-0 z-30 md:hidden bg-brand-navy/20 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-x-4 top-[4.5rem] z-40 md:hidden rounded-3xl bg-white border border-brand-border shadow-editorial p-5 max-h-[calc(100vh-6rem)] overflow-y-auto"
             >
-              <span>Let&apos;s Talk</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </motion.div>
+              <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-soft border border-brand-border text-xs font-medium text-brand-navy mb-4">
+                <span className="w-2 h-2 rounded-full bg-brand-sky" />
+                <span>Available for opportunities</span>
+              </div>
+
+              <nav className="flex flex-col space-y-1 mb-5">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="px-4 py-3 rounded-xl text-base font-medium text-brand-ink hover:bg-brand-soft hover:text-brand-navy transition-colors flex items-center justify-between"
+                  >
+                    <span>{item.label}</span>
+                    <ArrowRight className="w-4 h-4 text-brand-sky" />
+                  </Link>
+                ))}
+              </nav>
+
+              <Link
+                href="#contact"
+                onClick={() => setMobileOpen(false)}
+                className="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-brand-navy text-white text-sm font-medium hover:bg-brand-sky transition-colors"
+              >
+                <span>Let&apos;s Talk</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

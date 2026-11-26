@@ -7,9 +7,9 @@ export function CompanySpotlights() {
   return (
     <div>
       {/* 19 — PACIFIC INVESTMENT CAPITAL */}
-      <section className="bg-brand-soft py-24 lg:py-28 border-t border-brand-border/60 overflow-hidden">
+      <section className="bg-brand-soft py-16 sm:py-24 lg:py-28 border-t border-brand-border/60 overflow-hidden">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -21,14 +21,14 @@ export function CompanySpotlights() {
                 VICE MANAGING DIRECTOR
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-semibold text-brand-ink tracking-tight mb-2">
+              <h2 className="text-2xl sm:text-4xl font-semibold text-brand-ink tracking-tight mb-2">
                 Pacific Investment Capital
               </h2>
-              <p className="text-base font-medium text-brand-sky mb-8">
+              <p className="text-sm sm:text-base font-medium text-brand-sky mb-6 sm:mb-8">
                 Institutional Investment Holding Company
               </p>
 
-              <div className="grid grid-cols-2 gap-y-3 gap-x-6 text-sm sm:text-base text-brand-ink font-medium">
+              <div className="grid grid-cols-2 gap-y-2.5 sm:gap-y-3 gap-x-4 sm:gap-x-6 text-sm sm:text-base text-brand-ink font-medium">
                 <div>Investment Strategy</div>
                 <div>Capital Allocation</div>
                 <div>Portfolio Management</div>
@@ -46,8 +46,8 @@ export function CompanySpotlights() {
               transition={{ duration: 0.7 }}
               className="lg:col-span-6"
             >
-              <div className="rounded-3xl bg-white border border-brand-border p-8 shadow-soft-blue">
-                <div className="flex items-center justify-between text-xs font-medium text-brand-muted mb-6">
+              <div className="rounded-3xl bg-white border border-brand-border p-5 sm:p-8 shadow-soft-blue">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-xs font-medium text-brand-muted mb-5 sm:mb-6">
                   <span>CAPITAL ALLOCATION ARCHITECTURE</span>
                   <span className="text-brand-sky">DISCIPLINED VALUE</span>
                 </div>
@@ -96,9 +96,9 @@ export function CompanySpotlights() {
       </section>
 
       {/* 20 — GLOBAL EXPOR INDONESIA */}
-      <section className="bg-white py-24 lg:py-28 border-t border-brand-border/60 overflow-hidden">
+      <section className="bg-white py-16 sm:py-24 lg:py-28 border-t border-brand-border/60 overflow-hidden">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left: Subtle World Map Made from Thin Blue Lines */}
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
@@ -107,8 +107,8 @@ export function CompanySpotlights() {
               transition={{ duration: 0.7 }}
               className="lg:col-span-6 order-2 lg:order-1"
             >
-              <div className="rounded-3xl bg-brand-soft border border-brand-border p-8">
-                <div className="flex items-center justify-between text-xs font-medium text-brand-muted mb-4">
+              <div className="rounded-3xl bg-brand-soft border border-brand-border p-5 sm:p-8">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-xs font-medium text-brand-muted mb-4">
                   <span>CROSS-BORDER TRADE CORRIDORS</span>
                   <span className="text-brand-navy">INDONESIA &rarr; GLOBAL</span>
                 </div>
@@ -155,11 +155,11 @@ export function CompanySpotlights() {
                 FOUNDER &amp; CEO
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-semibold text-brand-ink tracking-tight mb-6">
+              <h2 className="text-2xl sm:text-4xl font-semibold text-brand-ink tracking-tight mb-5 sm:mb-6">
                 Global Expor Indonesia
               </h2>
 
-              <div className="grid grid-cols-2 gap-y-3 gap-x-6 text-sm sm:text-base text-brand-ink font-medium">
+              <div className="grid grid-cols-2 gap-y-2.5 sm:gap-y-3 gap-x-4 sm:gap-x-6 text-sm sm:text-base text-brand-ink font-medium">
                 <div>Global Trade</div>
                 <div>Export</div>
                 <div>Business Development</div>
@@ -172,9 +172,9 @@ export function CompanySpotlights() {
       </section>
 
       {/* 21 — HANSAI OCEAN INDUSTRIES */}
-      <section className="bg-brand-soft py-24 lg:py-28 border-t border-brand-border/60 overflow-hidden">
+      <section className="bg-brand-soft py-16 sm:py-24 lg:py-28 border-t border-brand-border/60 overflow-hidden">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left: Copy */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -187,14 +187,14 @@ export function CompanySpotlights() {
                 CHIEF COMMISSIONER
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-semibold text-brand-ink tracking-tight mb-2">
+              <h2 className="text-2xl sm:text-4xl font-semibold text-brand-ink tracking-tight mb-2">
                 Hansai Ocean Industries
               </h2>
-              <p className="text-base font-medium text-brand-sky italic mb-8">
+              <p className="text-sm sm:text-base font-medium text-brand-sky italic mb-6 sm:mb-8">
                 &ldquo;Driven by the Ocean. Built for the Future.&rdquo;
               </p>
 
-              <div className="grid grid-cols-2 gap-y-3 gap-x-6 text-sm sm:text-base text-brand-ink font-medium">
+              <div className="grid grid-cols-2 gap-y-2.5 sm:gap-y-3 gap-x-4 sm:gap-x-6 text-sm sm:text-base text-brand-ink font-medium">
                 <div>Corporate Governance</div>
                 <div>Strategic Leadership</div>
                 <div>Risk Management</div>
@@ -210,8 +210,8 @@ export function CompanySpotlights() {
               transition={{ duration: 0.7 }}
               className="lg:col-span-6"
             >
-              <div className="rounded-3xl bg-white border border-brand-border p-8 shadow-soft-blue">
-                <div className="flex items-center justify-between text-xs font-medium text-brand-muted mb-4">
+              <div className="rounded-3xl bg-white border border-brand-border p-5 sm:p-8 shadow-soft-blue">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-xs font-medium text-brand-muted mb-4">
                   <span>MARITIME GOVERNANCE</span>
                   <span className="text-brand-navy">LONG-TERM HORIZON</span>
                 </div>

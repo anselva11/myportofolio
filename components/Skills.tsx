@@ -6,9 +6,9 @@ import { skillGroups } from '@/data/skills'
 
 export function Skills() {
   return (
-    <section className="bg-brand-soft py-24 lg:py-28 border-t border-brand-border/60">
+    <section className="bg-brand-soft py-16 sm:py-24 lg:py-28 border-t border-brand-border/60">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 lg:gap-16">
           {skillGroups.map((group, idx) => (
             <motion.div
               key={group.category}
@@ -18,18 +18,18 @@ export function Skills() {
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               className="pb-6 border-b border-brand-border/80"
             >
-              <div className="text-xs font-semibold tracking-[0.2em] text-brand-sky uppercase mb-6">
+              <div className="text-xs font-semibold tracking-[0.2em] text-brand-sky uppercase mb-4 sm:mb-6">
                 {group.category}
               </div>
 
               {/* Typography-based Skill Cloud without percentage bars */}
-              <div className="flex flex-wrap items-baseline gap-x-6 gap-y-3">
+              <div className="flex flex-wrap items-baseline gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3">
                 {group.items.map((item) => {
                   const sizeClass =
                     item.weight === 'xl'
-                      ? 'text-2xl sm:text-3xl font-semibold text-brand-ink'
+                      ? 'text-xl sm:text-3xl font-semibold text-brand-ink'
                       : item.weight === 'lg'
-                      ? 'text-lg sm:text-xl font-medium text-brand-navy'
+                      ? 'text-base sm:text-xl font-medium text-brand-navy'
                       : 'text-sm sm:text-base font-normal text-brand-muted'
 
                   return (

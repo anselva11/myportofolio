@@ -13,13 +13,13 @@ const stages = [
 
 export function CareerStory() {
   return (
-    <section className="bg-white py-24 lg:py-32 border-t border-brand-border/60">
+    <section className="bg-white py-16 sm:py-24 lg:py-32 border-t border-brand-border/60">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-16">
-          <div className="text-xs font-semibold tracking-[0.2em] text-brand-sky uppercase mb-4">
+        <div className="max-w-3xl mb-10 sm:mb-16">
+          <div className="text-xs font-semibold tracking-[0.2em] text-brand-sky uppercase mb-3 sm:mb-4">
             MY JOURNEY
           </div>
-          <h2 className="text-4xl sm:text-5xl font-semibold text-brand-ink tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-5xl font-semibold text-brand-ink tracking-tight mb-4 sm:mb-6">
             From Code to Capital.
           </h2>
           <p className="text-base sm:text-lg text-brand-muted leading-relaxed">
@@ -28,14 +28,19 @@ export function CareerStory() {
         </div>
 
         {/* Horizontal & Mobile Vertical Connected Progression */}
-        <div className="relative pt-4 pb-6">
+        <div className="relative pt-2 sm:pt-4 pb-4 sm:pb-6">
           {/* Connecting thin light-blue line (desktop) */}
           <div
             aria-hidden="true"
             className="hidden md:block absolute top-9 left-8 right-8 h-px bg-brand-skySoft/70"
           />
+          {/* Connecting thin light-blue vertical line (mobile) */}
+          <div
+            aria-hidden="true"
+            className="md:hidden absolute top-6 bottom-8 left-5 w-px bg-brand-skySoft/70"
+          />
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 relative z-10">
             {stages.map((stage, idx) => (
               <motion.div
                 key={stage}

@@ -6,13 +6,13 @@ import { educations } from '@/data/education'
 
 export function Education() {
   return (
-    <section className="bg-white py-24 lg:py-28 border-t border-brand-border/60">
+    <section className="bg-white py-16 sm:py-24 lg:py-28 border-t border-brand-border/60">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="text-xs font-semibold tracking-[0.2em] text-brand-sky uppercase mb-8">
+        <div className="text-xs font-semibold tracking-[0.2em] text-brand-sky uppercase mb-6 sm:mb-8">
           05 — EDUCATION
         </div>
 
-        <div className="space-y-5">
+        <div className="space-y-4 sm:space-y-5">
           {educations.map((item, idx) => (
             <motion.div
               key={item.id}
@@ -20,24 +20,24 @@ export function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="rounded-3xl bg-brand-soft border border-brand-border p-8 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-8"
+              className="rounded-2xl sm:rounded-3xl bg-brand-soft border border-brand-border p-5 sm:p-8 lg:p-10 flex flex-col md:flex-row md:items-center justify-between gap-5 sm:gap-8"
             >
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                 {/* Minimal Institution Emblem */}
-                <div className="w-16 h-16 rounded-2xl bg-white border border-brand-border shadow-soft-blue flex items-center justify-center shrink-0">
-                  <span className="text-lg font-bold tracking-tight text-brand-navy">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-white border border-brand-border shadow-soft-blue flex items-center justify-center shrink-0">
+                  <span className="text-sm sm:text-lg font-bold tracking-tight text-brand-navy">
                     {item.monogram}
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-brand-ink tracking-tight">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-ink tracking-tight">
                     {item.institution}
                   </h3>
-                  <div className="text-base sm:text-lg font-medium text-brand-sky mt-1">
+                  <div className="text-sm sm:text-lg font-medium text-brand-sky mt-1">
                     {item.program}
                   </div>
-                  <p className="text-sm text-brand-muted max-w-xl mt-3 leading-relaxed">
+                  <p className="text-sm text-brand-muted max-w-xl mt-2.5 sm:mt-3 leading-relaxed">
                     {item.description}
                   </p>
                   {item.skills && item.skills.length > 0 && (

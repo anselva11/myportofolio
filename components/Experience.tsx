@@ -9,20 +9,20 @@ export function Experience() {
   const [selectedExp, setSelectedExp] = useState<ExperienceEntry | null>(null)
 
   return (
-    <section id="experience" className="bg-brand-soft py-24 lg:py-32 border-t border-brand-border/60">
+    <section id="experience" className="scroll-mt-24 bg-brand-soft py-16 sm:py-24 lg:py-32 border-t border-brand-border/60">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 lg:mb-20">
-          <div className="text-xs font-semibold tracking-[0.2em] text-brand-sky uppercase mb-4">
+        <div className="max-w-3xl mb-10 sm:mb-16 lg:mb-20">
+          <div className="text-xs font-semibold tracking-[0.2em] text-brand-sky uppercase mb-3 sm:mb-4">
             02 — EXPERIENCE
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-ink tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-semibold text-brand-ink tracking-tight leading-tight">
             A journey across technology, business &amp; capital.
           </h2>
         </div>
 
         {/* Editorial Vertical Timeline */}
-        <div className="relative border-l-2 border-brand-border pl-6 sm:pl-10 space-y-6">
+        <div className="relative border-l-2 border-brand-border pl-5 sm:pl-10 space-y-5 sm:space-y-6">
           {experienceList.map((item, idx) => (
             <motion.div
               key={item.id}
@@ -36,7 +36,7 @@ export function Experience() {
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') setSelectedExp(item)
               }}
-              className={`group relative rounded-2xl p-6 sm:p-8 transition-all duration-300 cursor-pointer border ${
+              className={`group relative rounded-2xl p-5 sm:p-8 transition-all duration-300 cursor-pointer border ${
                 item.playful
                   ? 'bg-gradient-to-r from-white via-brand-tint/60 to-white border-brand-skySoft/60 hover:bg-brand-tint hover:border-brand-sky'
                   : 'bg-white/70 border-transparent hover:bg-brand-tint/70 hover:border-brand-border'
@@ -45,13 +45,13 @@ export function Experience() {
               {/* Timeline Node Dot & Brightening Accent on Hover */}
               <span
                 aria-hidden="true"
-                className="absolute -left-[33px] sm:-left-[49px] top-10 w-3.5 h-3.5 rounded-full bg-white border-2 border-brand-skySoft group-hover:border-brand-sky group-hover:scale-125 transition-all duration-300"
+                className="absolute -left-[28px] sm:-left-[48px] top-8 sm:top-10 w-3.5 h-3.5 rounded-full bg-white border-2 border-brand-skySoft group-hover:border-brand-sky group-hover:scale-125 transition-all duration-300"
               />
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-start">
                 {/* Large Blue Number & Metadata */}
-                <div className="lg:col-span-4 flex items-start gap-5">
-                  <span className="text-4xl sm:text-5xl font-semibold text-brand-skySoft group-hover:text-brand-sky group-hover:-translate-y-0.5 transition-all duration-300 select-none leading-none">
+                <div className="lg:col-span-4 flex items-start gap-4 sm:gap-5">
+                  <span className="text-3xl sm:text-5xl font-semibold text-brand-skySoft group-hover:text-brand-sky group-hover:-translate-y-0.5 transition-all duration-300 select-none leading-none">
                     {item.number}
                   </span>
 
@@ -138,26 +138,26 @@ export function Experience() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: 12 }}
               transition={{ duration: 0.25 }}
-              className="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto rounded-3xl bg-white border border-brand-border shadow-editorial p-7 sm:p-10 z-10"
+              className="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto rounded-3xl bg-white border border-brand-border shadow-editorial p-5 sm:p-10 z-10"
             >
               <button
                 onClick={() => setSelectedExp(null)}
-                className="absolute top-6 right-6 p-2 rounded-full bg-brand-soft text-brand-navy hover:bg-brand-tint transition-colors"
+                className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 rounded-full bg-brand-soft text-brand-navy hover:bg-brand-tint transition-colors"
                 aria-label="Close detail panel"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl font-semibold text-brand-sky">
+              <div className="flex items-center gap-3 mb-3 sm:mb-4 pr-10">
+                <span className="text-xl sm:text-2xl font-semibold text-brand-sky">
                   {selectedExp.number}
                 </span>
-                <span className="text-xs font-semibold tracking-widest text-brand-muted uppercase">
+                <span className="text-[11px] sm:text-xs font-semibold tracking-widest text-brand-muted uppercase">
                   {selectedExp.category}
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-semibold text-brand-ink tracking-tight">
+              <h3 className="text-xl sm:text-3xl font-semibold text-brand-ink tracking-tight pr-8">
                 {selectedExp.role}
               </h3>
               <div className="text-base font-medium text-brand-navy mt-1">
